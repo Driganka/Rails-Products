@@ -3,7 +3,9 @@ class ProductImagesController < ApplicationController
 
   # GET /product_images or /product_images.json
   def index
-    @product_images = ProductImage.all
+    @product_images = ProductImage.all.page(params[:page]).per(5)
+  end
+
   end
 
   # GET /product_images/1 or /product_images/1.json

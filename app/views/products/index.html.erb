@@ -2,13 +2,24 @@
 
 <h1>Products</h1>
 
-<div id="products">
-  <% @products.each do |product| %>
-    <%= render product %>
-    <p>
-      <%= link_to "Show this product", product %>
-    </p>
-  <% end %>
-</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Code</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <div id="products">
+    <% @products.each do |product| %>
+      <tr><td><%= render product %></td></tr>
+      <tr><td>
+        <%= link_to "Show this product", product %></td>
+      </tr>
+    <% end %>
+  </div>
+</table>
 
 <%= link_to "New product", new_product_path %>

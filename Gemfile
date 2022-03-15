@@ -7,6 +7,8 @@ gem "mini_magick"
 gem 'file_validators'
 gem 'simple_form'
 gem 'nested_form'
+gem 'kaminari'
+
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
